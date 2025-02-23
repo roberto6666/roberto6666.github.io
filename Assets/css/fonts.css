@@ -1,0 +1,12 @@
+/* Importazione "Montserrat" font: utilizzato per corpi testo */
+@font-face {
+    font-family: 'Montserrat'; /* nominato il font */
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf); /* link al file .tff del font*/
+}
+
+/* Importazione "Unbounded" font: utilizzato per titoli ed intestazioni */
+@font-face {
+    font-family: 'Unbounded'; /* nominato il font */
+    src: url(../fonts/Unbounded-VariableFont_wght.ttf); /* link al file .tff del font*/
+}
+
