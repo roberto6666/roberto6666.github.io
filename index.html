@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matteo Denti - sito web</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- inserimento cdn per plugin swiper js -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- inserimento cdn per css bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- inserimento cdn per icone bootstrap -->
+  <link rel="stylesheet" href="Assets/css/style.css"> <!-- inserimento dello style.css -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- per plugin esterno animation on scroll -->
+</head>
+
+<body>
+
+
+  <!-- SEZIONE 1: NAVBAR ✅ -->
+  <nav class="navbar navbar-expand-lg sticky-top"> <!-- rimosso colore default ed aggoiunto classe sticky-top -->
+    <div class="container"> <!-- rimosso il fluid per centrare meglio la navbar -->
+      <a class="navbar-brand" href="#">MatteoDenti</a> 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto"> <!-- Utilizzo di "ms-auto" per agire sui margini e spostare il menu a destra -->
+
+          <li class="nav-item">
+            <a class="nav-link" href="#hero">Home</a> <!-- Utilizzo degli ID per linkare alle sezioni della pagina -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#servizi">Servizi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+
+        </ul>
+
+        <a href="#contatti" class="btn bottone-colorato ms-lg-3">Contatti</a>
+        <!-- Inserimento di un bottone usando la classe di bootstrap -->
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- SEZIONE 2: HERO SECTION ✅-->
+  <section id="hero" class="hero-section d-flex align-items-center text-center">
+    <video id="hero-video" class="hero-video" autoplay muted loop playsinline>
+      <source id="video-source" src="../SITO WEB DEFINITIVO/Assets/images/Landing page/Video-desktop.mov"
+        type="video/mp4">
+    </video>
+
+    <!-- 
+    <div class="container hero-content">
+        <a href="#portoflio" class="btn bottone-herosection">Vai al portfolio</a>
+    </div>
+    -->
+
+  </section>
+  
+
+  <!-- SEZIONE 3: ABOUT ✅-->
+  <section id="about" data-aos="zoom-in-down" data-aos-delay="100"> <!-- le classi data-aos e data-aos-delay servono per DEFINIRE L'AOS  -->
+    <div class="container margin-about">
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="./Assets/images/Landing page/Foto profilo landing page.png">
+          <!-- inserimento della immagine copertina -->
+        </div>
+        <div class="col-lg-6">
+          <h1 class="margin-title-about"> Fotografo, Videomaker e Visual designer
+          </h1>
+          <p class="margin-text-about mt-3"> Piacere! Mi chiamo Matteo Denti, ho 21 anni e sono un fotografo, videomaker
+            e visual designer con sedi principali tra le città di <b> Milano / Torino. </b> Attualmente frequento la triennale di
+            <b> Design e comunicazione al Politecnico di Torino.</b> <br> Fin da piccolo ho sempre cercato un modo per esprimere le
+            mie idee e quando a 14 anni ho preso in mano la mia prima fotocamera me ne sono subito innamorato.
+            Iniziando come <b> ritrattista e streetphotographer </b> nel mio passatempo libero, nel corso di questi anni <b> ho
+            sviluppato una serie di competenze attraverso esperienze concrete </b> che mi hanno portato a sviluppare delle competenze pratiche, 
+            tra cui saper gestire ed organizzare shooting fotgrafici, dalla direzione artistica delle foto fino alle fasi di scatto ed alla
+            post-produzione finale. Oltre a queste competenze hanno iniziato a porsi delle solide fondamenta
+            anche per quanto riguarda il videomaking e la post-produzione video. <br> Inoltre, grazie ai miei <b> studi in design al
+            Politecnico </b> ho appreso i principi base della progettazione nei settori della comunicazione, in particolare
+            del <b>graphic design</b>, del <b>branding</b>, della <b> comunicazione social</b> e della <b> UX e UI </b></p>
+          <a href="#portfolio" class="btn margin-text-about bottone-colorato mt-4">Vai al Portfolio</a>
+          <!-- utilizzo classi bottone di bootstrap-->
+          <a href="Assets/CV/Denti_Matteo_Curriculum PROVA.pdf" class="btn margin-text-about bottone-colorato-cv mt-4"
+            target="_blank">Link al CV</a>
+        </div>
+      </div>
+    </div>
+  </section class="section-padding">
+  </section>
+
+
+  <!-- SEZIONE 4: SERVIZI ✅-->
+  <section id="servizi" class="section-padding section-margin background-color-servizi colore">
+    <!-- classi per dare del margin rispetto alla sezione sopra e dare del padding interno -->
+    <div class="container">
+
+      <div class="row mb-4">
+        <div class="col text-center">
+          <h2 class="titoli-sezioni colore mb-3 "> Servizi offerti</h2>
+          <!-- utilizzo classe per aumentare grandezza corpo testo -->
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- SHOOTING FOTOGRAFICI -->
+        <div class="col-lg-4 bordo-sezioni">
+          <!-- in questo modo su grandi schermi vengono visualizzate su 3 colonne, mentre su smartphone occupano tutto lo spazi; utilizzo del bordo -->
+          <div class="service p-4">
+            <i class="bi bi-camera" style="font-size: 60px; color:  #E5E8F1;"></i> <!-- utilizzo di icone bootstrap -->
+            <h4 class="colore mb-4">Shooting fotografici</h4>
+            <!-- classe colore per dare il corretto colore ai titoli -->
+            <p> Mi occupo di gestire tutto il processo che sta dietrouno shooting fotografico: dall'ideazione di
+              <b> concept e moodboard visive </b>, all' <b> organizzazione degli scatti </b> collaborando con figure professionali ed
+              interfacciandomi con il cliente, fino alla fase finale della <b> post-produzione.</b> </p>
+          </div>
+        </div>
+
+        <!-- PRODUZIONE VIDEO -->
+        <div class="col-lg-4 bordo-sezioni">
+          <div class="service p-4">
+            <i class="bi bi-camera-reels" style="font-size: 60px; color:  #E5E8F1;"></i>
+            <h4 class="colore mb-4">Produzione Video</h4>
+            <p> Seguo ogni fase del processo creativo per la realizzazione di video: dall'ideazione di <b> concept e
+              storyboard narrativi, </b> alla pianificazione delle riprese collaborando con il team, fino al <b>montaggio finale</b> 
+              curato nei dettagli.</p>
+          </div>
+        </div>
+
+        <!-- VISUAL DESIGN -->
+        <div class="col-lg-4 bordo-sezioni">
+          <div class="service p-4">
+            <i class="bi bi-laptop" style="font-size: 60px; color:  #E5E8F1;"></i>
+            <h4 class="colore mb-4">Visual Design</h4>
+            <p> Infine mi occupo anche della <b>progettazione di comunicazioni visive,</b>
+              sviluppando output grafici realizzati con un approccio strategico mirato a soddisfare le reali esigenze del cliente, tra cui poster, locandine, 
+              campagne social, interfacce e prototipi digitali.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SEZIONE 5: PORTFOLIO ✅-->
+  <section id="portfolio" class="margin-section" data-aos="fade-right" data-aos-delay="50"> 
+    <div class="container">
+      
+
+      <!-- SELECTED WORK -->
+      <div class="row mb-4">
+
+        <div class="col-12 text-center">
+
+          <h2 class="titoli-sezioni mb-3"> Portfolio </h2>
+
+          <div class="col-12 text-start"> <!-- la classe bootstrap text start serve per mettere il testo a sinistra -->
+            <h4 class="mb-3 mt-5 margin-text-portfolio"> Selected work </h4>
+            <p class="margin-text-portfolio"> Una selezione dei miei più recenti lavori commissionati da clienti oppure realizzati come progetti universitari. 
+              Tra questi ci sono shooting fotografici per eventi e manifestazioni di vario tipo, ma sono presenti anche
+              campagne di comunicazione nelle quali unisco la fotografia al design in un'ottica di progettazione
+              strategica per veicolare messaggi e valori in maniera efficace ed impattante.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-12"> 
+          <!-- Inserimento Swiper js -->
+          <div class="swiper mySwiper pb-5"> <!-- padding per regolare la distanza dei dot dalle copertine -->
+            <div class="swiper-wrapper">
+
+              <!-- Slide 1: Graphic days -->
+              <div class="swiper-slide">
+                <div class="project p-3">
+
+                  <a href="PAGINE selected work/Page 1 - graphic days.html">
+                    <img src="Assets/images/Landing page/Graphic days_copertina.jpg" alt="descrizione progetto">
+                  </a>
+                  <div class="overlay-progetti">
+                    <h4 class="titoli-copertine-progetti"> Graphic Days - vol. 2024 </h4>
+                    <!-- classe per dare il bianco ai titoli -->
+                    <p> Fotografia </p>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Slide 2: Calendario Leo -->
+              <div class="swiper-slide">
+                <div class="project p-3">
+
+                  <a href="PAGINE selected work/Page 2 - calendario leo.html">
+                    <img src="Assets/images/Landing page/Calendario Leo_copertina.jpg" alt="descrizione progetto">
+                  </a>
+                  <div class="overlay-progetti">
+                    <h4 class="titoli-copertine-progetti"> Calendario Leo </h4>
+                    <p> Fotografia, Design </p>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Slide 3: Entropia -->
+              <div class="swiper-slide">
+                <div class="project p-3">
+
+                  <a href="PAGINE selected work/Page 3  - entropia.html">
+                    <img src="Assets/images/Landing page/Entropia dell'oro_copertina.jpg" alt="descrizione progetto">
+                  </a>
+                  <div class="overlay-progetti">
+                    <h4 class="titoli-copertine-progetti"> Backstage Entropia dell'oro </h4>
+                    <p> Fotografia </p>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Slide 4: Openview -->
+              <div class="swiper-slide">
+                <div class="project p-3">
+
+                  <a href="PAGINE selected work/Page 4 - openview.html">
+                    <img src="Assets/images/Landing page/Openview_copertina.jpg" alt="descrizione progetto">
+                  </a>
+                  <div class="overlay-progetti">
+                    <h4 class="titoli-copertine-progetti"> Openview project </h4>
+                    <p> Fotografia </p>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Slide 5: Croce rossa -->
+              <div class="swiper-slide">
+                <div class="project p-3">
+
+                  <a href="PAGINE selected work/Page 5 - croce rossa.html">
+                    <img src="Assets/images/Landing page/Croce rossa_copertina.jpg" alt="descrizione progetto">
+                  </a>
+                  <div class="overlay-progetti">
+                    <h4 class="titoli-copertine-progetti"> Campagna croce rossa </h4>
+                    <p> Branding e comunicazione, Fotografia </p>
+                  </div>
+
+                </div>
+              </div>
+
+
+            </div>
+            <div class="swiper-pagination"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PERSONAL -->
+      <div class="row mb-4" data-aos="fade-right" data-aos-delay="50">
+
+        <div class="col-12 text-center">
+
+
+          <div class="col-12 text-start"> <!-- la classe bootstrap text start serve per mettere il testo a sinistra -->
+            <h4 class="mb-3 mt-5 margin-text-portfolio"> Personal</h4>
+            <p class="margin-text-portfolio"> Anche nel mio tempo libero realizzo fotografie e video, attraverso i quali cerco di catturare tutto ciò 
+              che ritengo interessante ai miei occhi e che mi permetta di raccontare delle storie. Non mi interessa semplicemente immortalare un momento, 
+              ma piuttosto tradurre in immagini quello che mi colpisce.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-12">
+          <!-- Inserimento Swiper js -->
+          <div class="swiper mySwiper pb-5"> <!-- padding per regolare la distanza dei dot dalle copertine -->
+            <div class="swiper-wrapper">
+
+
+              <!-- Slide 1: Streetphotography -->
+              <div class="swiper-slide">
+                <div class="project p-3">
+
+                  <a href="PAGINE Personal/Streetphotograph/Page STREET.html">
+                    <img src="Assets/images/Landing page/Street_copertina.png" alt="descrizione progetto">
+                  </a>
+                  <div class="overlay-progetti">
+                    <h4 class="titoli-copertine-progetti"> Street photography </h4>
+                    <!-- classe per dare il bianco ai titoli -->
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Slide 2: Ritratti -->
+              <div class="swiper-slide">
+                <div class="project p-3">
+
+                  <a href="PAGINE Personal/Ritratti/Page RITRATTI.html">
+                    <img src="Assets/images/Landing page/Ritratti_copertina.png" alt="descrizione progetto">
+                  </a>
+                  <div class="overlay-progetti">
+                    <h4 class="titoli-copertine-progetti"> Ritratti </h4>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Slide 3: Travel video -->
+              <div class="swiper-slide">
+                <div class="project p-3">
+
+                  <a href="Page 3  - entropia.html">
+                    <img src="Assets/images/Landing page/Travel_copertina.png" alt="descrizione progetto">
+                  </a>
+                  <div class="overlay-progetti">
+                    <h4 class="titoli-copertine-progetti"> Travel video </h4>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Slide 4: Lifestyle -->
+              <div class="swiper-slide">
+                <div class="project p-3">
+
+                  <a href="PAGINE Personal/Lifestyle/Page LIFESTYLE.html">
+                    <img src="Assets/images/Landing page/Lifestyle_copertina.png" alt="descrizione progetto">
+                  </a>
+                  <div class="overlay-progetti">
+                    <h4 class="titoli-copertine-progetti"> Lifestyle </h4>
+                  </div>
+
+                </div>
+              </div>
+
+
+            </div>
+            <div class="swiper-pagination"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+  </section>
+
+
+  <!-- SEZIONE 6: CONTATTI ✅-->
+  <section id="contatti" class="margin-section section-padding" data-aos="fade-right" data-aos-delay="50">
+    <div class="container">
+
+      <div class="row">
+        <div class="col text-center">
+          <h2 class="titoli-sezioni mb-3"> Mettiamoci in contatto 👨🏻‍💻 </h2>
+          <p> Scrivi qui le tue informazioni di recapito così da poter collaborare insieme, oppure alla mia mail
+            matteodenti0503@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8 form-sfondo">
+
+          <form action="https://api.web3forms.com/submit" method="POST" class="row g-3 p-lg-5"> <!-- UTILIZZO DI Web3Forms PER INVIARE I MESSAGGI ALLA MAIL matteodenti0503@gmail.com -->
+            <input type="hidden" name="access_key" value="7c5999fa-b4f3-4a64-9877-c5f690f87283">  <!-- INSERIMENTO DELL'API key -->
+            
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;"> <!-- aggiunta di un reCAPTCHA per evitare MESSAGGI SPAM -->
+            <input type="hidden" name="recaptcha_response" id="recaptchaResponse"> <!-- campo nascosto per il token di reCAPTCHA -->
+
+
+            <!-- Inizio di un modulo, con la classe "row" per organizzare i campi in una griglia -->
+            <div class="col-lg-6 form-group">
+              <!-- Colonna che occupa 6 colonne su schermi grandi, con classe Bootstrap per il gruppo di input -->
+              <input type="text" class="form-control" placeholder="nome (obbligatorio)" required>
+              <!-- campo di input inserire i dati richiesti -->
+            </div>
+            <div class="col-lg-6 form-group">
+              <input type="text" class="form-control" placeholder="cognome" >
+            </div>
+            <div class="col-lg-12 form-group">
+              <input type="email" class="form-control" placeholder="indirizzo email (obbligatorio)" required>
+            </div>
+            <div class="col-lg-12 form-group">
+              <input type="text" class="form-control" placeholder="argomento (obbligatorio)" required>
+            </div>
+            <div class="col-lg-12 form-group">
+              <textarea name="message" rows="5" class="form-control" placeholder="Messaggio (obbligatorio)" required> </textarea>
+              <!-- campo in cui l'utente puo scrivere il soggetto della mail-->
+            </div>
+            <div class="col-lg-12 form-group d-grid"> <!-- classe d-grid per allungare il bottone -->
+              <button class="btn bottone-colorato"> invia messaggio </button> <!-- inserimento di un bottone -->
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- SEZIONE 7: FOOTER ✅-->
+  <section id="footer" class="margin-section section-padding-footer background-color-footer colore">
+    <div class="container justify-content-center">
+
+      <div class="row text-center">
+
+        <div class="col-12">
+          <a href="#hero" class="link-footer">
+            <p>Back to top <i class="bi bi-arrow-up-short"></i></p>
+          </a>
+        </div>
+
+        <div class="col-12 mb-1">
+
+          <!-- link profilo instagram-->
+          <a href="https://www.instagram.com/teodenti.jpg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank" class="link-footer">
+            <!--  l'attributo target apre il link in una nuova scheda invece di ricaricare la pagina attuale. -->
+            <i class="bi bi-instagram" style="font-size: 26px;"> </i>
+          </a>
+
+          <!-- link profilo linkedin -->
+          <a href="https://www.linkedin.com/in/matteo-denti/" target="_blank" class="link-footer">
+            <i class="bi bi-linkedin ps-2" style="font-size: 26px;"></i>
+          </a>
+
+          <!-- link profilo behance-->
+          <a href="https://www.behance.net/matteodenti" target="_blank" class="link-footer">
+            <i class="bi bi-behance ps-2" style="font-size: 30px;"></i>
+          </a>
+
+          <!-- link per la mail -->
+          <a href="mailto:matteodenti0503@gmail.com" target="_blank" class="link-footer">
+            <i class="bi bi-envelope ps-2" style="font-size: 28px;"></i>
+          </a>
+
+          <!-- link contatti telegram -->
+          <a href="https://t.me/Abend999" target="_blank" class="link-footer">
+            <i class="bi bi-telegram ps-2" style="font-size: 28px;"></i>
+          </a>
+        </div>
+
+        <div class="col-12">
+          <p> ©2025 Matteo Denti. All rights Reserved </p>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- inserimento cdn per js swiper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> <!-- Aggiunta dello script di AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script> <!-- inserimento cdn per js bootstrap -->
+  <script src="https://www.google.com/recaptcha/api.js?render=IL_TUO_SITE_KEY"></script> <!-- inserimento della libreria reCAPTCHA (per evitare messaggi spam dal form contatti)-->
+  <script src="Assets/Js/Javascript.js"> </script> <!-- inserimento dello Javascript.js-->
+
+</body>
+
+</html>
