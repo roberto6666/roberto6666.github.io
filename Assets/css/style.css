@@ -1,0 +1,428 @@
+/* Importazione fonts */
+@import url(../css/fonts.css);
+
+/* DICHIARAZIONE VARIABILI CSS: in questo modo posso gestire ed apportare delle 
+modifiche in futuro in maniera efficiente (senza perdere tempo) */
+:root {
+    --colore-primario: #1D1E21;  /* per titoli, heading ed elementi grafici */
+    --colore-primario-chiaro: #3b3d40; /* per quando ci passa sopra il mouse (hover) */
+    --colore-secondario: #E5E8F1; /* per elementi secondari */
+    --colore-primario-rgb: rgb(29, 30, 33); /* colore principale in rgb/ */
+    --colore-body: #656565; /* per paragrafi */
+    --colore-background: #ffffff; /* per sfondo del sito */
+    --font-principale: "Unbounded", sans-serif; /* FONT PRINCIPALI: titoli ed headings  */
+    --font-secondario: "Montserrat", sans-serif; /* FONT SECONDARI: corpi testo */
+    --box-shadow: 0px 15px 25px rgba(0,0,0,.08); /* per le ombre */
+    --transition: all 0.5s ease; /* per le transizioni */
+}
+
+/* RESET DEFAULT PROPERTIES */
+body {
+   font-family: var(--font-principale);
+   line-height: 1.7; /* per gestire l'interlinea e rendere maggiormente leggibile il testo */
+   color: var(--colore-body);
+   background-color: var(--colore-background);
+}
+
+p {
+    font-family: var(--font-secondario);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--colore-primario);
+}
+
+a {
+    text-decoration: none;  /* per rimuovere la sottolineatura predefinita dei link */
+    color: var(--colore-secondario);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--colore-primario); /* per quando il mouse passa sopra a dei link e cambia colore */
+}
+
+img {
+    max-width: 100%; 
+    height: auto; /* per mantenere la proporzione dell'img senza che venga deformata (altezza si adatta proporzionalmente alla lunghezza) */
+}
+
+.section-padding { /* classe per il padding delle diverse sezioni del sito */
+    padding-top: 100px;
+    padding-bottom: 150px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.section-margin { /* classe per i margini delle diverse sezioni del sito */
+    margin-top: 100px;
+    margin-bottom: 140px;
+}
+
+.titoli-sezioni {
+ font-size: 40px;
+}
+
+.bordo-sezioni {  /* per definire il bordo dei paragrafi nella sezione dei servizi */
+    border: 2px solid var(--colore-secondario);
+    box-shadow: var(--box-shadow);
+}
+
+
+
+
+/* NAVBAR ✅ */
+.navbar {
+    background-color: var(--colore-background); /* non dimenticare colore back altrimenti diventa trasparente*/
+    box-shadow: var(--box-shadow);
+    padding: 15px; 
+}
+
+.navbar-brand { /* per rendere + bold e colorato il logo */
+    font-weight: 750;
+    font-size: 25px;
+    color: var(--colore-primario);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 300;
+    color: var(--colore-primario);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--colore-primario);
+}
+
+.nav-link:hover {
+    color: var(--colore-primario-chiaro);
+}
+
+.btn {
+    font-weight: 600;
+    font-size: 17px;
+    border-radius: 0px; /* togliere il radius */
+    padding: 5px 24px; /* per aggiungere un po' di padding interno */
+}
+
+.bottone-colorato {
+    background-color: var(--colore-primario); /* per fare risaltare il bottone con il colore */
+    color: var(--colore-secondario);
+}
+
+.bottone-colorato:hover {
+    background-color: var(--colore-primario-chiaro); /* quando passa il mouse cambia il colore */
+    color: var(--colore-secondario);
+}
+
+.nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+
+/* HEROSECTION ✅*/
+
+/* DA RIGA 139 A 155: per gestire la posizione e dimensione del video di copertina */
+.hero-section {
+    position: relative;  /* Imposta la posizione dell'elemento come "relativa" per poter utilizzare il posizionamento assoluto all'interno di esso */
+    height: 100vh; /* Imposta l'altezza della sezione a 100% dell'altezza della finestra (viewport), quindi copre tutto lo schermo */
+    overflow: hidden;  /* Nasconde eventuali contenuti che escono fuori dai confini dell'elemento */
+}
+
+.hero-video {
+    position: absolute; /* Posiziona il video in modo assoluto rispetto al suo elemento contenitore (la .hero-section) */
+    top: 50%; /* Posiziona il video al 50% dell'altezza del contenitore (a metà) */
+    left: 50%; /* Posiziona il video al 50% della larghezza del contenitore (a metà) */
+    width: 100%; /* Imposta la larghezza del video al 100% della larghezza del contenitore (copre tutta la larghezza) */
+    height: 100%; /* Imposta l'altezza del video al 100% dell'altezza del contenitore (copre tutta l'altezza) */
+    object-fit: cover; /* Fa in modo che il video riempia completamente l'area, mantenendo le proporzioni */
+    transform: translate(-50%, -50%); /* Sposta il video per centrarlo esattamente nel contenitore */
+}
+
+/* PER GESTIRE IL BOTTONE SOPRA AL VIDEO */
+.hero-content {
+    position: absolute;  /* Posiziona il contenuto sopra il video in modo assoluto */
+    bottom: 150px;  /* Posiziona il contenuto (bottone) a 20px dal bordo inferiore della sezione */
+    left: 50%;  /* Centra il contenuto orizzontalmente */
+    transform: translateX(-50%); /* Compensa il margine sinistro per centrare il contenuto */
+    z-index: 2;  /* Assicura che il contenuto sia visibile sopra il video */
+    text-align: center;  /* Centra il testo orizzontalmente */
+    color: white;  /* Imposta il colore del testo su bianco */
+}
+
+.bottone-herosection {
+    font-size: 20px;
+    background-color: var(--colore-primario); /* per fare risaltare il bottone con il colore */
+    color: var(--colore-secondario);
+    opacity: 100%;
+}
+
+.bottone-herosection:hover {
+    background-color: var(--colore-primario-chiaro); /* quando passa il mouse cambia il colore */
+    color: var(--colore-secondario);
+}
+
+
+
+
+
+/* ABOUT ✅ */
+.bottone-colorato-cv {
+    background-color: var(--colore-background);
+    color: var(--colore-primario);
+    box-shadow: var(--box-shadow);
+}
+
+.margin-about {
+    margin-top: 50px; /* un po' di margin per staccare dalla navbar*/
+}
+
+.margin-title-about { /* per centrare il testo rispetto all'immagine */
+    margin-top: 75px;
+    margin-left: 20px;
+}
+
+.margin-text-about {
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+
+
+
+/* SERVIZI ✅*/
+#servizi {
+    color: var(--colore-secondario); /* colore paragrafi */
+}
+
+.colore {
+    color: var(--colore-secondario); /* colore titoli */
+}
+
+.background-color-servizi {
+    background-color: var(--colore-primario);
+}
+
+
+
+/* PORTFOLIO */ 
+#portfolio {
+    margin-top: 50px; /* applicato un leggero margine per staccare maggiormente dalla sezione superiore */ 
+}
+
+.margin-text-portfolio {
+    margin-left: 20px;
+    margin-right: 30px; 
+}
+
+.swiper-pagination-bullet {
+    background-color: black; /* per cambiare colore ai bullet */ 
+}
+
+/* DA RIGA 187 A 211: animazione del titolo del progetto che passa sopra la copertina;
+nel caso la puoi cancellare, basta che poi aggiusti padding alla riga 181 dell'html  */ 
+.project {
+    overflow: hidden;
+    position: relative;
+}
+
+.project .overlay-progetti {
+    padding: 32px;
+    position: absolute;
+    bottom: 0px; /* posiziona l'elemento alla base del contenitore */ 
+    left: 0px;
+    transition: all 0.4s ease-in-out;
+    opacity: 0; /* per impostare le scritte come trasparenti (inizialmente nascosto) */
+    transform: translateY(60px); /* per spostare le scritte verso il basso di 60px */
+}
+
+.project:hover .overlay-progetti {
+    opacity: 1; /* rende visibile le scritte quando passa sopra il mouse  */
+    transform: translateY(0px); /* per riportare l'elemento alla sua posizione originale (sopra la copertina) */
+    color: white;
+}
+
+.titoli-copertine-progetti { 
+    color: white; /* per dare il bianco ai titoli */ 
+}
+
+/* DA RIGA 216 A 222: animazione immagine che si ingrandisce quando utente 
+ci passa sopra con il mouse */
+a img {
+    transition: transform 0.35s ease-in-out;
+}
+
+a img:hover {
+    transform: scale(1.02); /* per ingrandire leggermente la copertina quando ci passa sopra il mouse */
+}
+
+
+
+
+/* CONTATTI */ 
+.form-sfondo {
+    box-shadow: var(--box-shadow);
+}
+
+.form-control {
+    border-radius: 0;
+    border: 0.8px solid rgb(29, 30, 33);
+}
+
+#contact .form-control:focus {
+    box-shadow: none;
+    border-color: var(--colore-primario);
+}
+
+
+
+
+/* FOOTER */ 
+.background-color-footer {
+    background-color: var(--colore-primario);
+    margin-top: 170px;
+    padding-top: 1px;
+    padding-top: 50px;
+}
+
+.section-padding-footer { /* classe per il padding delle diverse sezioni del sito */
+    padding-bottom: 50px;
+}
+
+.link-footer {
+    color: var(--colore-secondario);
+}
+
+.link-footer:hover {
+    color: var(--colore-primario-chiaro);
+}
+
+
+
+
+/* GRIGLIA FOTOGRAFICA PER PROGETTI - pagine diverse */ 
+#griglia-foto .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+
+#griglia-foto .column {
+    grid-column: span 3;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+/* per ingrandire le foto */ 
+.modal-img {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.modal {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.783);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.modal-content { /* Modal container */
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    object-fit: contain; /* Mantiene le proporzioni originali */
+    object-position: center; /* Centra l'immagine nel contenitore */
+    transition: all 0.3s ease-in-out; /* Aggiunge un effetto di transizione per un miglior effetto visivo */
+    padding: 50px;
+    background-color: white;
+}
+
+
+.close { /* Bottone per chiudere la lightbox */
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: var(--colore-primario);
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+
+.close:hover, /* Rendi il bottone piu visibile al passaggio del mouse */
+.close:focus {
+    color: #ddd;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* PULSANTI DI NAVIGAZIONE PER SCORRERE TRA LE FOTO */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--colore-primario);
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: var(--colore-primario);
+    color: var(--colore-background);
+}
+
+
+
+/* PULSANTI DI NAVIGAZIONE PER SCORRERE TRA I PROGETTI (vicino al titolo) */
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Distanza tra frecce e titolo */
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.titoli-sezioni {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
